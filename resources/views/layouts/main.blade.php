@@ -23,7 +23,7 @@
 		@include('layouts.sidebar')
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-			<h2>@yield('section-title')</h2>
+			<h2 class="py-3">@yield('section-title')</h2>
 			@yield('content')
         </main>
       </div>

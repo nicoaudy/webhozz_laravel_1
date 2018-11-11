@@ -1,9 +1,5 @@
 <?php
 
-Route::get('/', function(){
-	return view('layouts.main');
-});
-
-Route::get('/product', function(){
-	return view('product.index');
-});
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('/product', 'ProductController@index')->name('product.index');
+Route::get('/product/create', 'ProductController@create')->name('product.create');
