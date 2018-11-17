@@ -8,9 +8,15 @@
 				</a>
 			</li>
 			<li class="nav-item">
+				<a class="nav-link" href="{{ route('category.index') }}">
+					<span data-feather="shopping-cart"></span>
+					Category
+				</a>
+			</li>
+			<li class="nav-item">
 				<a class="nav-link" href="{{ route('product.index') }}">
 					<span data-feather="shopping-cart"></span>
-					Products
+					products
 				</a>
 			</li>
 		</ul>
