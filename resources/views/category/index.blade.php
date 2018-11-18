@@ -7,8 +7,7 @@
 @section('content')
 	<a class="btn btn-success" href="{{ route('category.create') }}" style="margin-bottom: 10px">Create New Category 👷</a>
 
-	@if(session()->has('status'))
-		<div class="alert alert-primary" role="alert">
+	@if(session()->has('status')) <div class="alert alert-primary" role="alert">
 			{{ session()->get('status') }}
 		</div>
 	@endif
@@ -26,8 +25,8 @@
 			<td>{{ $row->name }}</td>
 			<td>{{ $row->description }}</td>
 			<td>
-				<a class="btn btn-info" href="">Edit</a>
-				<a class="btn btn-danger" href="">Delete</a>
+				<a class="btn btn-info" href="{{ route('category.edit', $row->id) }}">Edit</a>
+				<a href="{{ route('category.destroy', $row->id) }}" class="btn btn-danger" data-method="delete" data-token="{{ csrf_token() }}" data-confirm="Are you sure?">Delete</a>
 			</td>
 		</tr>
 		@endforeach
