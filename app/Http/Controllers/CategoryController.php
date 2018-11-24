@@ -37,10 +37,12 @@ class CategoryController extends Controller
 		]);
 
 		# 1. Insert to database
+
 		Category::create([
 			'name' => $request->name,	
 			'slug' => str_slug($request->name),
 			'description' => $request->description,	
+			'user_id' => auth()->user()->id
 		]);
 
 		# Redirect to index page

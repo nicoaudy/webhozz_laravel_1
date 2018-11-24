@@ -15,6 +15,7 @@
 	<table class="table table-hover table-bordered">
 		<tr>
 			<th>#</th>
+			<th>Created By</th>
 			<th>Name</th>
 			<th>Description</th>
 			<th>Action</th>
@@ -22,6 +23,7 @@
 		@foreach($categories as $row)
 		<tr>
 			<td>{{ $loop->iteration }}</td>
+			<td>{{ optional($row->user)->name }}</td>
 			<td>{{ $row->name }}</td>
 			<td>{{ $row->description }}</td>
 			<td>

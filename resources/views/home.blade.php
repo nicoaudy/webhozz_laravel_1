@@ -5,9 +5,12 @@
 @endsection
 
 @section('section-title')
-	{{ $title }}	
+	{{ $title }}
 @endsection
 
 @section('content')
-	{{ $content }}	
+	Hi, {{ auth()->user()->name }}
+
+	<div id="products_total"></div>
+	{!! $lava->render('BarChart', 'products_total', 'products_total') !!}
 @endsection
